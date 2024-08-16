@@ -1,34 +1,130 @@
 /* CSS Document */
 
-h1{
-	font-size: 60px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #990000;
+    padding: 10px 0;
+	color: white;
 	text-align: center;
-	margin: 0;
-	padding: 20px 0;
-	text-shadow: 3px 3px 1px grey;
 }
 
-html{
-	background-color: #000000;
-	color: aliceblue;
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-img{
-	width: 400px;
+.navbar li {
+    display: inline-block;
+	position: relative;
+    margin-right: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #990000;
+}
+
+.navbar li a:hover {
+    background-color: #b30000;
+    border-radius: 5px;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
 	display: block;
-	margin: 0 auto;
 }
 
-body{
-	width: 600px;
-	margin: 0 auto;
-	background-color: #1B2D41;
-	padding: 0 20px 20px 20px;
-	border: 5px solid black;
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #990000;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+	z-index: 1;
 }
 
-p{
-	font-size: 40px;
-	text-align: center;
-	text-emphasis-color: whitesmoke;
+.dropdown-menu li {
+	padding: 10px;
+	border-bottom: 1px solid #fff;
+}
+
+.dropdown-menu li a {
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-menu li a:hover {
+	background-color: #b30000;
+}
+
+.container {
+	display: flex;
+	margin: 20px;
+}
+
+.sidebar {
+	width: 25%;
+	padding: 20px;
+	background-color: #f4f4f4;
+	border-right: 1px solid #ccc;
+}
+
+.main-content {
+	width: 75%;
+	padding: 20px;
+}
+
+main {
+    text-align: center;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.sidebar li {
+	margin-bottom: 10px;
+}
+
+.sidebar a {
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #990000;
+	background-color: #f9f9f9;
+	bordor-radius: 5px;
+	border: 1px solid #ddd;
+	transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.sidebar a:hover {
+	background-color: #990000;
+	color: white;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	border: 1px solid #990000;
 }

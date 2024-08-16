@@ -1,38 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="author" content="吴诚舟" />
-		<title>wusbackyard</title> <!--吴的后花园-->
-		<link rel="stylesheet" href="styles/style.css">
-
-	</head>
-	
-	<body>
-		<header>
-			<!--本站所有页面统一的主标题-->
-			<h1>WUSBACKYARD</h1>
-		</header>
-
-		<nav>
-			<!--本站统一的导航栏-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="吴诚舟">
+    <title>wusbackyard</title>
+    <link rel="stylesheet" href="styles/style.css">
+	 <script>
+        function loadHTML(elementId, filePath) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">主页</a></li>
+				<li><a href="diaries.html">碎碎念</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="container">
+		<aside class="sidebar">
+			<h1>索引</h1>
 			<ul>
-				<li><a href="index.html">主页</a></li>
-				<li><a href="diaries.html">胡言乱语</a></li>
-				<li><a href="roommates.html">小丑之家</a></li>
-				<li><a href="photos.html">wu的相册</a></li>
+				<li><a href="#240816">2024.8.16</a></li>
 			</ul>
-		</nav>
-		
-		<main>
-			<aside>
-			
-			</aside>
+		</aside>
+		<main class="main-content">
+			<section id="240816"></section>
 		</main>
-	</body>
+	</div>
 	
-	<footer>
-		<p>邮箱：2400011447@stu.pku.edu.cn</p>
-	</footer>
-	
+	<script>
+		loadHTML("240816","diaries/2024-08-16.html")
+	</script>
+</body>
 </html>
